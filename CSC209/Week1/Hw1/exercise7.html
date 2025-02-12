@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>Exercise 7</title>
+</head>
+<body>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+          background-image: url('Images/background.jpg');
+        }
+    
+        
+    .button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size:  16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition-duration:0.4s;
+      cursor:pointer;
+    }
+
+    .button1 {background-color:cornflowerblue}
+    .button1:hover{background-color:rgb(67, 101, 163);}
+    
+        th:nth-child(even), td:nth-child(even) {
+            border: 1px solid;
+            text-align: center;
+            background-color: cornflowerblue;
+            border: 1px white;
+            border-collapse: collapse;
+            border-radius:10px;
+            border-style:ridge;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom:15px;
+            padding-left:20px;
+            padding-right:20px;
+            border-spacing:30px;
+        }
+
+        th:nth-child(odd), td:nth-child(odd) {
+            border: 1px solid;
+            text-align: center;
+            background-color: rgb(67, 101, 163);
+            border: 1px white;
+            border-collapse: collapse;
+            border-radius:10px;
+            border-style:ridge;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom:15px;
+            padding-left:20px;
+            padding-right:20px;
+            border-spacing:30px;
+        }
+
+        td:hover, th:hover {background-color: #D6EEEE;}
+
+        </style>
+
+<img src="Images/cloud.png" alt="Cloud" width = "200" height = "100">
+
+<a href="startPage.html">
+  <button class = "button button1">Back to HW1 page</button>
+</a>
+
+  <h1> Tables </h1>
+
+  <hr>
+
+<table style="width:100%">
+    <caption style="color:cornflowerblue;">My schedule this semester:</caption>
+    <tr>
+      <th style="color:white; width:30%;">Class</th>
+      <th style="color:white; width: 20%;">Day</th>
+      <th style="color:white; width:20%;">Time</th>
+    </tr>
+    <tr style="height:50px">
+      <td style="color:white;">EDC 239</td>
+      <td style="color:white;">Mon/Wed</td>
+      <td style="color:white;">9:25-10:40</td>
+    </tr>
+    <tr style="height:50px">
+      <td style="color:white;">CSC 209</td>
+      <td style="color:white;">Wed</td>
+      <td style="color:white;">1:20-4:00</td>
+    </tr>
+    <tr style="height:50px">
+        <td style="color:white;">PSY 202</td>
+        <td style="color:white;">Tues/Thurs</td>
+        <td style="color:white;">1:20-2:35</td>
+      </tr>
+    <tr style="height:50px">
+        <td style="color:white;">ARS 162</td>
+        <td style="color:white;">Tues/Thurs</td>
+        <td style="color:white;">9:25-12:05</td>
+      </tr>
+  </table>
+
+  <table>
+    <caption style="color:cornflowerblue;">Who am I?</caption>
+    <tr>
+      <th colspan="2"; style="color:white;">Name</th>
+      <th style="color:white;">Age</th>
+    </tr>
+    <tr>
+      <td style="color:white;">Rachel</td>
+      <td style="color:white;">Kunkel</td>
+      <td style="color:white;">19</td>
+    </tr>
+    </table>
+
+    <table>
+        <tr>
+            <caption style="color:cornflowerblue;">My major/minor(s):</caption>
+          <th style="color:white;">Name</th>
+          <td style="color:white;">Rachel</td>
+        </tr>
+        <tr>
+          <th rowspan="2"; style="color:white;">Major/Minor(s)</th>
+          <td style="color:white;">Psychology</td>
+        </tr>
+        <tr>
+          <td style="color:white;">Digital Art</td>
+      </tr>
+      </table>
+
+      <h3 style="color:cornflowerblue;"> Monday and Tuesday are hidden from the table below! </h3>
+      <table>
+        <colgroup>
+          <col span="2" style="visibility: collapse">
+        </colgroup>
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+
+</body>
+</html>

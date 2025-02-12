@@ -1,0 +1,64 @@
+<html>
+<header>
+
+</header>
+
+<body>
+    <h2> JavaScript will write text into an HTML element! </h2>
+
+    <p id = "demo"> </p>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script>
+
+    <button type="button" onclick="myFunction()">Change Text!!</button>
+
+    <p id="test">This is a demonstration.</p>
+
+    <script>
+    function myFunction() { 
+    document.getElementById("test").innerHTML = "Hello JavaScript!";
+    }
+    </script>
+
+    <button type="button" onclick="myFunction()">Change Styles!!</button>
+
+    <p id="style">This is a demonstration.</p>
+
+    <script>
+    function myFunction() { 
+    document.getElementById("style").style.fontSize = "25px";
+    document.getElementById("style").style.color = "cornflowerblue";
+    document.getElementById("style").style.backgroundColor = "white";
+    }
+    </script>
+
+
+    <script>
+    function cloud(sw) { 
+        var pic;
+        if (sw == 0) {
+            pic = "cloud.png"
+        } else {
+            pic = "sky.jpg"
+        }
+
+        document.getElementById("myImage").src = pic;
+    }
+    </script>
+
+    <img id = "myImage"
+    src = "cloud.png">
+
+    <p>
+        <button type="button" onclick="cloud(1)">Sky</button>
+        <button type="button" onclick="cloud(0)">Cloud</button>
+     </p>
+
+
+     <noscript>Sorry your browser doesn't support JavaScript</noscript>
+
+
+
+</body>
+</html>

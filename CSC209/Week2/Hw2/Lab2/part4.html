@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+
+    #myHeader {
+        background-color: cornflowerblue;
+        color: white;
+        padding:40px;
+        text-align: center;
+    }
+
+    .city {
+        background-color: white;
+        color: cornflowerblue;
+        padding: 10px;
+    }
+
+</style>
+
+</head>
+<body>
+
+    <h1 id="myHeader">My Cities</h1>
+    <button onclick = "displayResult()"> Change text </button>
+
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "And their capital!";
+        }
+    </script>
+
+    <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 id="Homepage">Homepage</h2>
+    <a href="http://localhost:8888/RKunkel05.github.io/CSC209/Hw1/startPage.html#Homepage">Jump to Homepage</a>
+
+</body>
+</html>

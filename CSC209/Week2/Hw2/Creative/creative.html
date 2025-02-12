@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>Creative</title>
+    <link id="theme" rel="stylesheet" type = "text/css" href = "styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <span class="dotSmall"></span> <!-- Calls upon the dotSmall in CSS-->
+    <!-- Inline Block: Defines shape so it is placed on same line as adjacent content but still functions as a block-->
+    <span class="dotBig"></span> <!-- Calls upon the dotBig in CSS -->
+    <span class="dotSmall"></span>
+    <h1> My Favorite Songs </h1>
+    <span class="dotSmall"></span>
+    <span class="dotBig"></span>
+    <span class="dotSmall"></span>
+
+    <br />
+
+    <a href="../mainPage.html">
+        <button style = "display: inline-block;"> Homepage </button>
+    </a>
+
+
+    <a href="https://open.spotify.com/user/warrior_28?si=afcb53d5efb94d9c">
+        <button style = "display: inline-block;"> My Spotify </button>
+    </a>
+
+    <button onclick="references()" style = "display: inline-block;"> References </button>
+    <div id = "references" style="display:none;">
+        <pre>
+<a href="https://www.w3schools.com/charsets/ref_utf_misc_symbols.asp">Adding the Stars</a>
+<a href="https://developer.spotify.com/documentation/embeds/tutorials/creating-an-embed">Spotify Embeds</a>
+Sources for all albums cover images utilized in this webpage can be accessed via their respective Spotify embeds. 
+        </pre>
+    </div>
+    <script>
+        function references() {
+            var x = document.getElementById("references");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <br />
+
+    <table>
+          <tr style="height:50px">
+            <td><img src="../Images/august.webp" width="200" height ="200"></td>
+            <td style="width:100%"> <h2> August - flipturn </h2> <br /> This song is so fantastic! I especially love the guitar in this and the way the song weaves between these softer moments and more intense, louder bursts. Its a song I could easily listen to on loop for a few hours and not get tired of. The acoustic version is another rendition I would highly recommend. </td>
+          </tr>
+          <tr style="height:50px">
+            <td>Rating: &#9733 &#9733 &#9733 &#9733 &#9733</td>
+            <!-- Spotify embed code; uses iframe to import external media-->
+              <td><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0elCmyfISzkP5tAYTVuYjS?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>
+            </tr>
+    </table>
+
+    <br />
+
+    <table>
+        <tr style="height:50px">
+          <td><img src="../Images/gorillaz.jpeg" width="200" height ="200"></td>
+          <td style="width:100%"> <h2> 19-2000 - Gorillaz </h2> <br /> Gorillaz is one of my favorite artists - if not my #1 - and all of their music is incredibly special to me. 19-2000 is such a funky, weird song that encapsulates the experimental nature of the group. The song itself is relatively simple with a repetitive melody, but I love the way it integrates all of these funky sound effects and dialogue snippets into it. </td>
+        </tr>
+        <tr style="height:50px">
+          <td>Rating: &#9733 &#9733 &#9733 &#9733 &#9733</td>
+          <!-- Spotify embed code; uses iframe to import external media-->
+            <td><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1kSWrMDt439cT64WpjJigW?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>
+          </tr>
+    </table>
+
+    <br />
+
+    <table>
+        <tr style="height:50px">
+          <td><img src="../Images/peachTrees.jpeg" width="200" height ="200"></td>
+          <td style="width:100%"> <h2> Peach Trees - Ax and the Hatchetmen </h2> <br /> Ax and the Hatchetmen is an artist I just found this year and this was the song that got me into them! I love how the singers voice, drums, and guitarline all play together in this song to create a fun, groovy sound. Its a song you listen to and cant help but dance a little to. </td>
+        </tr>
+        <tr style="height:50px">
+          <td>Rating: &#9733 &#9733 &#9733 &#9733 &#9734</td>
+          <!-- Spotify embed code; uses iframe to import external media-->
+            <td><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2hiEGsafGTYbc5UYuU3WN6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>
+          </tr>
+  </table>
+
+  <br />
+
+  <table>
+    <tr style="height:50px">
+      <td><img src="../Images/grandHoodoo.jpg" width="200" height ="200"></td>
+      <td style="width:100%"> <h2> Grand Hoodoo - The Moss </h2> <br /> This is another song that I discovered last semester and I love it so dearly. I love how expressive the singers voice is in the song and how he plays with these different inflections. Something about his voice just scratches an itch in my brain! </td>
+    </tr>
+    <tr style="height:50px">
+      <td>Rating: &#9733 &#9733 &#9733 &#9733 &#9734</td>
+      <!-- Spotify embed code; uses iframe to import external media-->
+        <td><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5wZdxehFNOdgRFVHiZ5IUC?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>
+      </tr>
+</table>
+
+    <br />
+
+    <h5> Time Taken: 2hrs </h5> 
+    <img src="../Images/KITTTYYYY.png" alt="Silly Cat" width = "100" height = "100" style="vertical-align: middle">
+
+</body>
+</html>
