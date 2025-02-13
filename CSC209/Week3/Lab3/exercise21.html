@@ -1,0 +1,78 @@
+<html>
+<body>
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="demo"></p>
+
+    <script>
+    const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+    let text = "";
+    for (let i = 0; i < cars.length; i++) {
+    text += cars[i] + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+    </script>
+
+    <h2>JavaScript let</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+    var i = 5;
+    for (var i = 0; i < 10; i++) {
+    // some statements
+    }
+    document.getElementById("demo1").innerHTML = i;
+    </script>
+
+    <h2>JavaScript For In Loop</h2>
+    <p>The for in statement loops through the properties of an object:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+    const person = {fname:"John", lname:"Doe", age:25}; 
+
+    let txt = "";
+    for (let x in person) {
+    txt += person[x] + " ";
+    }
+
+    document.getElementById("demo2").innerHTML = txt;
+    </script>
+
+    <h2>JavaScript For Of Loop</h2>
+    <p>The for of statement loops through the values of any iterable object:</p>
+
+    <p id="demo3"></p>
+
+    <script>
+    const cars1 = ["BMW", "Volvo", "Mini"];
+
+    let text1 = "";
+    for (let x of cars1) {
+    text1 += x + "<br>";
+    }
+
+    document.getElementById("demo3").innerHTML = text1;
+    </script>
+
+    <h2>JavaScript While Loop</h2>
+
+    <p id="demo4"></p>
+
+    <script>
+    let text2 = "";
+    let h = 0;
+    while (h < 10) {
+    text2 += "<br>The number is " + h;
+    h++;
+    }
+    document.getElementById("demo4").innerHTML = text2;
+    </script>
+
+</body>
+</html>

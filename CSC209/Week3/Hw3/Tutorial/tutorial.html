@@ -1,1 +1,346 @@
-/Applications/MAMP/htdocs/RKunkel05.github.io
+<html>
+<head>
+    <title>Tutorial</title>
+    <link id="theme" rel="stylesheet" type = "text/css" href = "../Technical/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <span class="dotSmall"></span> <!-- Calls upon the dotSmall in CSS-->
+    <!-- Inline Block: Defines shape so it is placed on same line as adjacent content but still functions as a block-->
+    <span class="dotBig"></span> <!-- Calls upon the dotBig in CSS -->
+    <span class="dotSmall"></span>
+    <h1> Tutorials </h1>
+    <span class="dotSmall"></span>
+    <span class="dotBig"></span>
+    <span class="dotSmall"></span>
+    
+    <br />
+
+    <a href="../mainPage.html">
+        <button style = "display: inline-block;"> Homepage </button>
+    </a>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button onclick="document.getElementById('myImage').src='../Images/pic_bulbon.gif'">Turn on the light</button>
+
+    <img id="myImage" src="../Images/pic_bulbon.gif" style="width:100px">
+
+    <button onclick="document.getElementById('myImage').src='../Images/pic_bulboff.gif'">Turn off the light</button>
+
+    <br />
+
+    <h2>Demo JavaScript in Body</h2>
+
+    <p id="demo1">A Paragraph</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <script>
+    function myFunction() {
+    document.getElementById("demo1").innerHTML = "Paragraph changed.";
+    }
+    </script>
+
+    <br />  
+
+    <button onclick="window.print()">Print this page</button>
+
+    <br />
+    
+    <h2>JavaScript Statements</h2>
+
+    <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+    let x, y, z;  // Statement 1
+    x = 5;        // Statement 2
+    y = 6;        // Statement 3
+    z = x + y;    // Statement 4
+
+    document.getElementById("demo2").innerHTML =
+    "The value of z is " + z + ".";  
+    </script>
+
+    <br />
+
+    <h2>JavaScript Comments are NOT Executed</h2>
+
+    <p id="demo3"></p>
+
+    <script>
+    let c;
+    c = 5;
+    // c = 6; I will not be executed
+    document.getElementById("demo3").innerHTML = c;
+    </script>
+
+    <br />
+
+    <h2 id="myH"></h2>
+    <p id="myP"></p>
+    
+    <script>
+    // Change heading:
+    document.getElementById("myH").innerHTML = "JavaScript Comments";
+    // Change paragraph:
+    document.getElementById("myP").innerHTML = "My first paragraph.";
+    </script> 
+    
+    <br />
+
+    <h2>JavaScript Variables</h2>
+
+    <p>In this example, price1, price2, and total are variables.</p>
+
+    <p id="demo4"></p>
+
+    <script>
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2;
+    document.getElementById("demo4").innerHTML =
+    "The total is: " + total;
+    </script>
+
+    <br />
+
+    <h2>Redeclaring a Variable Using let</h2>
+
+    <p id="demo5"></p>
+
+    <script>
+    let  a = 10;
+    // Here x is 10
+
+    {  
+    let a = 2;
+    // Here x is 2
+    }
+
+    // Here x is 10
+    document.getElementById("demo5").innerHTML = a;
+    </script>
+
+    <br />
+
+    <h2>JavaScript const</h2>
+
+    <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+
+    <p id="demo6"></p>
+
+    <script>
+    // Create an Array:
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    // Change an element:
+    cars[0] = "Toyota";
+
+    // Add an element:
+    cars.push("Audi");
+
+    // Display the Array:
+    document.getElementById("demo6").innerHTML = cars; 
+    </script>
+
+    <br />
+
+    <h2>JavaScript String Operators</h2>
+
+    <p>All conditional operators can be used on both numbers and strings.</p>
+    
+    <p id="demo7"></p>
+    
+    <script>
+    let text1 = "A";
+    let text2 = "B";
+    let result = text1 < text2;
+    document.getElementById("demo7").innerHTML = "Is A less than B? " + result;
+    </script>  
+
+    <br />
+
+    <h2>The ** Operator</h2>
+
+    <p id="demo8"></p>
+
+    <script>
+    let i = 5;
+    document.getElementById("demo8").innerHTML = i ** 2;
+    </script>
+
+    <br />
+
+    <h2>Left Shift Assignment</h2>
+    <h3>The <<= Operator</h3>
+
+    <p id="demo9"></p>
+
+    <script>
+    let f = -100;
+    f <<= 5;
+    document.getElementById("demo9").innerHTML = "Value of f is: " + f;
+    </script>
+
+    <br />
+
+    <h2>JavaScript Objects</h2>
+
+    <p id="demo10"></p>
+
+    <script>
+    const person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age     : 50,
+    eyeColor  : "blue"
+    };
+
+    document.getElementById("demo10").innerHTML =
+    person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    <br />
+
+    <h2>JavaScript Functions</h2>
+    <p>Using a function as a variable:</p>
+
+    <p id="demo11"></p>
+
+    <script>
+    let word = "The temperature is " + toCelsius(77) + " Celsius.";
+    document.getElementById("demo11").innerHTML = word;
+
+    function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+    } 
+    </script>
+
+    <br />
+
+    <h2>Creating JavaScript Objects</h2>
+    <h2>Using the new Keyword</h2>
+
+    <p id="demo12"></p>
+
+    <script>
+    // Create an Object
+    const person1 = new Object();
+    person1.firstName = "John";
+    person1.lastName = "Doe";
+    person1.age = 50;
+    person1.eyeColor = "blue"; 
+
+    // Diplay Object Content
+    document.getElementById("demo12").innerHTML =
+    person1.firstName + " is " + person1.age + " years old.";
+    </script>
+
+    <br />
+
+    <h2>The onclick Attribute</h2>
+
+    <button onclick="document.getElementById('demo13').innerHTML=Date()">The time is?</button>
+
+    <p id="demo13"></p>
+
+    <br />
+
+    <h2>JavaScript Strings</h2>
+
+    <p>The escape sequence \' inserts a single quote in a string.</p>
+
+    <p id="demo14"></p>
+
+    <script>
+    let text3 = 'It\'s alright.';
+    document.getElementById("demo14").innerHTML = text3; 
+    </script>
+
+    <br />
+    <h2>The toString() Method</h2>
+
+    <p>The toString() method returns an array as a comma separated string:</p>
+
+    <p id="demo15"></p>
+
+    <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo15").innerHTML = fruits.toString();
+    </script>
+
+    <br />
+
+    <h2>JavaScript Math.random()</h2>
+
+    <p id="demo16"></p>
+
+    <script>
+    let text4;
+    if (Math.random() < 0.5) {
+    text4 = "<a href='https://w3schools.com'>Visit W3Schools</a>";
+    } else {
+    text4 = "<a href='https://wwf.org'>Visit WWF</a>";
+    }
+    document.getElementById("demo16").innerHTML = text4;
+    </script>
+
+    <br />
+
+    <h2>JavaScript switch</h2>
+
+    <p id="demo17"></p>
+    
+    <script>
+    let day;
+    switch (new Date().getDay()) {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case  6:
+        day = "Saturday";
+    }
+    document.getElementById("demo17").innerHTML = "Today is " + day;
+    </script> 
+
+    <br />
+
+    <h2>JavaScript For Loop</h2>
+
+    <p id="demo18"></p>
+
+    <script>
+    const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+    let text5 = "";
+    for (let i = 0; i < cars.length; i++) {
+    text5 += cars[i] + "<br>";
+    }
+
+    document.getElementById("demo18").innerHTML = text5;
+    </script>
+
+
+    <h5> Time Taken: 2hr </h5>
+</body>

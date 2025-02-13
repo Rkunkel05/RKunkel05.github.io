@@ -1,0 +1,42 @@
+<html>
+<body>
+
+    <h1>Creating JavaScript Objects</h1>
+    <h2>Using an Object Literal</h2>
+
+    <p id="demo"></p>
+
+    <script>
+    // Create an Object:
+    const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+    };
+
+    // Display Data from the Object:
+    document.getElementById("demo").innerHTML =
+    person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    <h1>Creating JavaScript Objects</h1>
+    <h2>Using the new Keyword</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+    // Create an Object
+    const person1 = new Object();
+    person1.firstName = "John";
+    person1.lastName = "Doe";
+    person1.age = 50;
+    person1.eyeColor = "blue"; 
+
+    // Diplay Object Content
+    document.getElementById("demo1").innerHTML =
+    person1.firstName + " is " + person1.age + " years old.";
+    </script>
+
+</body>
+</html>
