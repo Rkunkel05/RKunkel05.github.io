@@ -16,15 +16,14 @@
     <span class="dotBig"></span>
     <span class="dotSmall"></span>
 
-    <br />
-
+    <p> Working on moving the slide numbers, arrows, and image text lower... </p>
     
     
 <nav>
     <ul>
         <li><a href="../mainPage.html"><button>Homepage</button></a></li>
         <li><button onclick="changeStyle()">Toggle Style</button></li>
-        <li><button id ="toggleButton" onclick="hideShow()"; style = "display: inline-block;"> About Me </button></li>
+        <li><button id ="toggleButton" onclick="hideShow()" style = "display: inline-block;"> About Me </button></li>
         <li><a href = "https://www.smith.edu/academics/psychology#psychology-major"><button>Major Requirements</button></a></li>
         <li><a href = "https://www.smith.edu/academics/computer-science#computer-science-minor"><button>Minor Requirements</button></a></li>
         <li><button onclick="references()" style = "display: inline-block;"> References </button></li>
@@ -92,6 +91,9 @@ Sophomore year at Smith College.</pre>
     <h1>My Cats!! </h1>
     
     <div id="slideshow-container"></div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
  
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>

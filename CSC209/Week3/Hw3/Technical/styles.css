@@ -194,13 +194,98 @@ th, td {
     margin-right: auto;
 }
 
+
+nav {
+    background-color: rgb(79, 115, 182);
+    border: 2px solid black;
+    border-radius: 25px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 20px auto;
+    text-align:center;
+}
+nav ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+nav ul li button:hover {
+    background-color:#666;
+}
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.alt-theme nav {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 20px auto;
+    text-align:center;
+}
+body.alt-theme nav ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+body.alt-theme nav ul li {
+    display: inline-block;
+}
+body.alt-theme nav ul li button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+body.alt-theme nav ul li button:hover {
+    background-color:#666;
+}
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 * {box-sizing:border-box}
  
          /* Slideshow container */
          .slideshow-container {
          max-width: 500px;
-         position: relative;
-         margin: auto;
+         padding-top:20px;
+         position: absolute;
+         margin: 20px auto;
+         height: auto
          }
  
          /* Hide the images by default */
@@ -212,7 +297,7 @@ th, td {
          .prev, .next {
             cursor: pointer;
             position: absolute;
-            top: 50%;
+            top: 190%;
             width: auto;
             margin-top: -22px;
             padding: 16px;
@@ -226,12 +311,13 @@ th, td {
  
          /* Position the "next button" to the right */
          .next {
-            right: 0;
+            bottom:15px;
             border-radius: 3px 0 0 3px;
           }
 
           .prev {
-            left: 0;
+            top: auto;
+            bottom:15px;
           }
  
          /* On hover, add a black background color with a little bit see-through */
@@ -241,23 +327,23 @@ th, td {
  
          /* Caption text */
          .text {
-         color: #f2f2f2;
-         font-size: 15px;
-         padding: 8px 12px;
-         position: absolute;
-         bottom: 8px;
-         width: 100%;
-         text-align: center;
-         }
+            color: white;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: -680;
+            width: 100%;
+            text-align: center;
+        }
  
          /* Number text (1/3 etc) */
          .numbertext {
-         color: #f2f2f2;
-         font-size: 12px;
-         padding: 8px 12px;
-         position: absolute;
-         top: 0;
-         }
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: auto;
+        }
  
          /* The dots/bullets/indicators */
          .dot {
@@ -285,85 +371,3 @@ th, td {
          from {opacity: .4}
          to {opacity: 1}
          } 
-
-         nav {
-            background-color: rgb(79, 115, 182);
-            border: 2px solid black;
-            border-radius: 25px;
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 20px auto;
-            text-align:center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding:0;
-            margin:0;
-            overflow: hidden;
-        }
-        nav ul li {
-            display: inline-block;
-        }
-        nav ul li button {
-            background-color: white;
-            color: black;
-            border: 2px solid black;
-            border-radius: 25px;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        nav ul li button:hover {
-            background-color:#666;
-        }
-        .dropdown-content {
-            display: none;
-            background-color: #f9f9f9;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            width: 50%;
-            text-align: left;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        body.alt-theme nav {
-            background-color: black;
-            border: 2px solid white;
-            border-radius: 25px;
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 20px auto;
-            text-align:center;
-        }
-        body.alt-theme nav ul {
-            list-style-type: none;
-            padding:0;
-            margin:0;
-            overflow: hidden;
-        }
-        body.alt-theme nav ul li {
-            display: inline-block;
-        }
-        body.alt-theme nav ul li button {
-            background-color: white;
-            color: black;
-            border: 2px solid black;
-            border-radius: 25px;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        body.alt-theme nav ul li button:hover {
-            background-color:#666;
-        }
-        .dropdown-content {
-            display: none;
-            background-color: #f9f9f9;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            width: 50%;
-            text-align: left;
-            margin-left: auto;
-            margin-right: auto;
-        }

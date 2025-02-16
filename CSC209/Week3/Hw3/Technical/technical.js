@@ -60,17 +60,14 @@ for (let i=0; i<slideNo.length; i++) {
     let crtText = text[i];
 
     let mainBody = 
-        '<div class="mySlides fade">' +
-        '<div class="numbertext">' + crtSlideNo + ' / 3</div>' +
+    '<div class="mySlides fade">' +
         '<img src="' + crtImg + '" style="width:50%">' +
+        '<div class="numbertext">' + crtSlideNo + ' / 3</div>' + 
         '<div class="text">' + crtText + '</div>' +
-        '</div>';
-    
+    '</div>';  
 
     slideshowContainer.innerHTML += mainBody;
 }
-
-    slideshowContainer.innerHTML += '<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a>';
 
         showSlides(slideIndex);
  
