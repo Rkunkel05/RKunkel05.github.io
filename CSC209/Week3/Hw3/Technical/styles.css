@@ -277,16 +277,15 @@ body.alt-theme nav ul li button:hover {
     margin-right: auto;
 }
 
+
 * {box-sizing:border-box}
  
          /* Slideshow container */
          .slideshow-container {
-         max-width: 500px;
-         padding-top:20px;
-         position: absolute;
-         margin: 20px auto;
-         height: auto
-         }
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+          }
  
          /* Hide the images by default */
          .mySlides {
@@ -299,8 +298,8 @@ body.alt-theme nav ul li button:hover {
             position: absolute;
             top: 190%;
             width: auto;
-            margin-top: -22px;
             padding: 16px;
+            margin-top: -22px;
             color: white;
             font-weight: bold;
             font-size: 18px;
@@ -308,16 +307,16 @@ body.alt-theme nav ul li button:hover {
             border-radius: 0 3px 3px 0;
             user-select: none;
           }
+          
  
          /* Position the "next button" to the right */
          .next {
-            bottom:15px;
+            right: 10%;
             border-radius: 3px 0 0 3px;
           }
 
           .prev {
-            top: auto;
-            bottom:15px;
+            right:90%;
           }
  
          /* On hover, add a black background color with a little bit see-through */
@@ -327,23 +326,23 @@ body.alt-theme nav ul li button:hover {
  
          /* Caption text */
          .text {
-            color: white;
-            font-size: 15px;
+            color: #f2f2f2;
+            font-size: 20px;
             padding: 8px 12px;
             position: absolute;
-            bottom: -680;
+            bottom: -980px;
             width: 100%;
             text-align: center;
-        }
- 
+          }
+
          /* Number text (1/3 etc) */
          .numbertext {
             color: #f2f2f2;
-            font-size: 12px;
+            font-size: 20px;
             padding: 8px 12px;
             position: absolute;
-            top: auto;
-        }
+            bottom: -980px;
+          }
  
          /* The dots/bullets/indicators */
          .dot {
