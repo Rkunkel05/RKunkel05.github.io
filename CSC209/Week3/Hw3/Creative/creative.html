@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Creative</title>
+    <link id="theme" rel="stylesheet" type = "text/css" href = "../Technical/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <span class="dotSmall"></span> <!-- Calls upon the dotSmall in CSS-->
+    <!-- Inline Block: Defines shape so it is placed on same line as adjacent content but still functions as a block-->
+    <span class="dotBig"></span> <!-- Calls upon the dotBig in CSS -->
+    <span class="dotSmall"></span>
+    <h1> Creative </h1>
+    <span class="dotSmall"></span>
+    <span class="dotBig"></span>
+    <span class="dotSmall"></span>
+
+    <br /> 
+    
+<nav>
+    <ul>
+        <li><a href="../mainPage.html"><button>Homepage</button></a></li>
+        <li><button onclick="references()" style = "display: inline-block;"> References </button></li>
+    </ul>
+</nav>
+
+
+<div id="references" class="dropdown-content" style="display:none">
+    <pre>
+<a href="https://www.w3schools.com/css/css3_borders.asp">Rounded Borders</a>
+random color generation: https://stackoverflow.com/questions/1484506/random-color-generator
+    </pre>
+</div>
+
+
+    <br />
+
+    <button onclick="randomColor()">Generate a Color!</button>
+
+    <br />
+
+    <h2 id="colorName"></h2>
+
+    <br />
+
+    <script src="creative.js"></script>
+
+
+    <h5> Time Taken: 1.5hrs </h5> 
+    <img src="../Images/sillyCatMeow.png" alt="Silly Cat" width = "100" height = "100" style="vertical-align: middle">
+
+</body>
+</html>
