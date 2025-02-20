@@ -8,9 +8,8 @@
 <body>
 
 
-    <span class="dotSmall"></span> <!-- Calls upon the dotSmall in CSS-->
-    <!-- Inline Block: Defines shape so it is placed on same line as adjacent content but still functions as a block-->
-    <span class="dotBig"></span> <!-- Calls upon the dotBig in CSS -->
+    <span class="dotSmall"></span> 
+    <span class="dotBig"></span> 
     <span class="dotSmall"></span>
     <h1> Tutorial </h1>
     <span class="dotSmall"></span>
@@ -26,10 +25,111 @@
         </ul>
     </nav>
 
+    <div id="references" class="dropdown-content" style="display:none">
+        <pre><a href="https://www.w3schools.com/graphics/canvas_intro.asp">HTML Canvas Tutorial</a></pre>
+    </div>
 
-    <script src="../JS/technical.js"></script>
+    <br />
+
+    <h2>HTML5 Empty Canvas</h2> 
+
+    <br />
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    Sorry, your browser does not support canvas.
+    </canvas>
+
+    <br />
+    <br />
+    
+    <br />
+    <h2>HTML5 Canvas - Draw a Rectangle</h2>
+    <br />
+    
+    <canvas id="myCanvas2" width="200" height="100" style="border:1px solid black;">
+    </canvas> 
+    
+
+    <script>
+    const canvas = document.getElementById("myCanvas2");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "red";
+    ctx.fillRect(0, 0, 150, 75);
+    </script> 
+
+    <br />
+
+    <h2>HTML5 Canvas - Draw a Line</h2>
+
+    <br />
+
+    <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000000;">
+    Sorry, your browser does not support canvas.
+    </canvas>
+
+    <script>
+    // Create a canvas
+    const canvas2 = document.getElementById("myCanvas3");
+    const ctx2 = canvas2.getContext("2d");
+
+    // Define a new path
+    ctx2.beginPath();
+
+    // Set a start-point
+    ctx2.moveTo(0,0);
+
+    // Set an end-point
+    ctx2.lineTo(200,100);
+
+    // Draw it
+    ctx2.stroke();
+    </script>
+
+    <br />
+
+    <h2>HTML5 Canvas arc() Method</h2>
+
+    <br />
+
+    <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #000000;">
+    Sorry, your browser does not support canvas.
+    </canvas>
+
+    <script>
+    const canvas3 = document.getElementById("myCanvas4");
+    const ctx3 = canvas3.getContext("2d");
+
+    ctx3.beginPath();
+    ctx3.arc(95,50,40,0,2*Math.PI);
+    ctx3.stroke();
+    </script>
+
+    <br />
+
+    <h2>HTML5 Canvas radialGradient()</h2>
+
+    <canvas id="myCanvas5" width="300" height="150" style="border:1px solid grey;">
+    Sorry, your browser does not support canvas.
+    </canvas>
+
+    <script>
+    const c = document.getElementById("myCanvas5");
+    const ctx4 = c.getContext("2d");
+
+    // Create gradient
+    const grad=ctx4.createRadialGradient(150,75,15,150,75,150);
+    grad.addColorStop(0,"lightblue");
+    grad.addColorStop(1,"darkblue");  
+
+    // Fill rectangle with gradient
+    ctx4.fillStyle = grad;
+    ctx4.fillRect(10,10,280,130);
+    </script>
+
 
     <br />
 
     <h5> Time Taken: 3hrs </h5> 
     <img src="../Images/sillyCatMeow.png" alt="Silly Cat" width = "100" height = "100" style="vertical-align: middle">
+
+    <script src="../JS/creative.js"></script>
