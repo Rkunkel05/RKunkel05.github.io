@@ -1,0 +1,55 @@
+<html>
+<body>
+
+    <ht onclick="this.innerHTML = 'oops!'"> Click on this text!</ht>
+
+    <h1 onclick="changeText(this)">Click on this text!</h1>
+
+    <script>
+    function changeText(id) {
+    id.innerHTML = "Meow!";
+    }
+    </script>
+
+    <h2>The onload Attribute</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+    function checkCookies() {
+    let text = "";
+    if (navigator.cookieEnabled == true) {
+        text = "Cookies are enabled.";
+    } else {
+        text = "Cookies are not enabled.";
+    }
+    document.getElementById("demo1").innerHTML = text;
+    }
+    </script>
+
+    <h2>The oninput Attribute</h2>
+
+    Enter your name: <input type="text" id="fname" oninput="upperCase()">
+    <p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+
+    <script>
+    function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+    </script>
+
+    <h2>The onchange Attribute</h2>
+
+    Enter your name: <input type="text" id="fname1" onchange="upperCase()">
+    <p>When you leave the input field, a function transforms the input to upper case.</p>
+
+    <script>
+    function upperCase() {
+        const x = document.getElementById("fname1");
+        x.value = x.value.toUpperCase();
+    }
+    </script>
+
+</body>
+</html>

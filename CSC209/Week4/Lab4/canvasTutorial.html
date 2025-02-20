@@ -1,0 +1,62 @@
+<html>
+<body>
+
+    <h1>HTML5 Canvas - Draw a Rectangle</h1>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;">
+    Sorry, your browser does not support canvas.
+    </canvas>
+
+    <script>
+        // 1) find <canvas> element
+        const canvas = document.getElementById("myCanvas");
+        // 2) create a drawing object for the canvas
+        const ctx = canvas.getContext("2d");
+        // 3) draw on the canvas
+        ctx.fillStyle = "red";
+        ctx.fillRect(0,0,150,75);
+    </script>
+
+<canvas id="myCanvas2" width="200" height="125" style="border:1px solid #000000;">
+    Sorry, your browser does not support canvas.
+    </canvas>
+    
+    <script>
+    // Create a canvas
+    const canvas2 = document.getElementById("myCanvas2");
+    const ctx2 = canvas2.getContext("2d");
+    
+    // Define a new path
+    ctx2.beginPath();
+    
+    // Set start-point
+    ctx2.moveTo(20,20);
+    
+    // Set sub-points
+    ctx2.lineTo(100,20);
+    ctx2.lineTo(175,100);
+    ctx2.lineTo(20,100);
+    
+    // Set end-point
+    ctx2.lineTo(20,20);
+    
+    // Draw it
+    ctx2.stroke();
+    </script>
+
+    <h1>HTML5 Canvas - rect()</h1>
+
+    <canvas id="myCanvas3" width="300" height="150" style="border:1px solid black">
+    Sorry, your browser does not support canvas.
+    </canvas>
+
+    <script>
+    const canvas3 = document.getElementById("myCanvas3");
+    const ctx3 = canvas3.getContext("2d");
+
+    ctx3.rect(10, 10, 150, 100);
+    ctx3.stroke();
+    </script>
+
+</body>
+</html>
