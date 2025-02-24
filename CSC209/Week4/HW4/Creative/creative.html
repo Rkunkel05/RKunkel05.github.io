@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creative</title>
+        <link id="theme" rel="stylesheet" type = "text/css" href = "../CSS/animation.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    Move the Lights! <br /><br />
+    <body>
+        <label for="redSpeed">Red light speed</label>
+        <select id="redSpeed">
+            <option value=30>Slow</option>
+            <option value=20>Medium</option>
+            <option value=10>Fast</option>
+        </select>
+        <button onclick="moveRed()" id="moveRedBtn">Move red light</button> <br><br>
+        
+        <label for="blueSpeed">Blue light speed</label>
+        <select id="blueSpeed">
+            <option value=30>Slow</option>
+            <option value=20>Medium</option>
+            <option value=10>Fast</option>
+        </select>
+        <button onclick="moveBlue()" id="moveBlueBtn">Move blue light</button> <br><br>  
+
+        <label for="greenSpeed">Green light speed</label>
+        <select id="greenSpeed">
+            <option value=30>Slow</option>
+            <option value=20>Medium</option>
+            <option value=10>Fast</option>
+        </select>
+        <button onclick="moveGreen()" id="moveGreenBtn">Move green light</button> <br><br>
+
+        <label for="orangeSpeed">Orange light speed</label>
+        <select id="orangeSpeed">
+            <option value=30>Slow</option>
+            <option value=20>Medium</option>
+            <option value=10>Fast</option>
+        </select>
+        <button onclick="moveOrange()" id="moveOrangeBtn">Move orange light</button> <br><br>
+        <input type="checkbox" id="loopAnimation">
+        <label for="loopAnimation">Loop Animation</label>
+    
+        <div id ="myContainerCreative">
+            <div id ="blueDot""></div>
+            <div id ="redDot""></div>
+            <div id ="greenDot"></div>
+            <div id ="orangeDot"></div>
+        </div>
+
+    
+        <script src="../JS/creative.js"></script>
+
+        Time Taken: 2 hrs
+
+    </body>
+</html>

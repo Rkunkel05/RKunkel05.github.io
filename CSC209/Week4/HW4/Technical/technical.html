@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Technical</title>
+        <link id="theme" rel="stylesheet" type = "text/css" href = "../CSS/animation.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <label for="redSpeed">Red square speed</label>
+        <select id="redSpeed">
+            <option value=30>Slow</option>
+            <option value=20>Medium</option>
+            <option value=10>Fast</option>
+        </select>
+        <button onclick="moveRed()" id="moveRedBtn">Move red square</button> <br><br>
+        
+        <label for="blueSpeed">Blue square speed</label>
+        <select id="blueSpeed">
+            <option value=30>Slow</option>
+            <option value=20>Medium</option>
+            <option value=10>Fast</option>
+        </select>
+        <button onclick="moveBlue()" id="moveBlueBtn">Move blue square</button> <br><br>  
+    
+        <div id ="myContainer">
+            <div id ="blueSq" class="blue"></div>
+            <div id ="redSq" class="red"></div>
+        </div>
+
+    
+        <script src="../JS/animation.js"></script>
+
+        Time Taken: 4hrs
+
+    </body>
+</html>

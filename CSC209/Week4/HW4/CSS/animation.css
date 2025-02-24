@@ -1,0 +1,96 @@
+#myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: white;
+    }
+
+#myContainerCreative {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: black;
+        }
+
+    #redSq {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity:50%;
+    background-color: rgb(255, 0, 0);
+    }
+
+    #blueSq {
+    width: 50px;
+    height: 50px;
+    top: 350px;
+    left: 350px;
+    position: absolute;
+    opacity:50%;
+    background-color: rgb(0, 51, 255);
+    }
+
+    #greenSq {
+        width: 50px;
+        height: 50px;
+        top: 0px;
+        left: 350px;
+        position: absolute;
+        opacity:50%;
+        background-color: rgb(13, 255, 0);
+        }
+        
+    #orangeSq {
+        width: 50px;
+        height: 50px;
+        top: 350px;
+        left: 0px;
+        position: absolute;
+        opacity:50%;
+        }
+
+    #redDot {
+        height:50px; 
+        width: 50px;
+        border-radius: 25px;
+        border-radius: 50%;
+        position:absolute;
+        opacity:50%;
+        background-color: rgb(255, 0, 0);
+    }
+
+    #blueDot {
+        height:50px; 
+        width: 50px;
+        top: 350px;
+        left: 350px;
+        border-radius: 25px;
+        border-radius: 50%;
+        position:absolute;
+        opacity:50%;
+        background-color: rgb(0, 51, 255);
+    }
+
+    #greenDot {
+        height:50px; 
+        width: 50px;
+        top: 0px;
+        left: 350px;
+        border-radius: 25px;
+        border-radius: 50%;
+        position:absolute;
+        opacity:50%;
+        background-color: rgb(13, 255, 0);
+    }
+
+    #orangeDot {
+        height:50px; 
+        width: 50px;
+        top: 350px;
+        left: 0px;
+        border-radius: 25px;
+        border-radius: 50%;
+        position:absolute;
+        opacity:50%;
+        background-color: rgb(255, 200, 0);
+    } 

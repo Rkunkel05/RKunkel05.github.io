@@ -3,8 +3,9 @@ function moveRed()
 {   
     var redSquare = document.getElementById("redSq");   
     var redPos = 0;
+    var redSpeed = document.getElementById("redSpeed").value;
     // Calls a function at specified intervals (in milliseconds)
-    var stepRedId = setInterval(stepRed, 10);
+    var stepRedId = setInterval(stepRed, redSpeed);
 
     function stepRed() {
         if (redPos == 350) {
@@ -22,8 +23,9 @@ function moveBlue()
 {   
     var blueSquare = document.getElementById("blueSq");   
     var bluePos = 350;
+    var blueSpeed = document.getElementById("blueSpeed").value;
     // Calls a function at specified intervals (in milliseconds)
-    var stepBlueId = setInterval(stepBlue, 10);
+    var stepBlueId = setInterval(stepBlue, blueSpeed);
 
     function stepBlue() {
         if (bluePos == 0) {
