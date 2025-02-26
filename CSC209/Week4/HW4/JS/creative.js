@@ -84,3 +84,42 @@ function moveOrange()
         }
     }
 }
+
+let shapes = [{
+    id: "redDot", posX: 0, posY:0, speed: document.getElementById("redSpeed").value, directionX: 1, directionY: 1
+}, {
+    id: "blueDot", posX: 350, posY: 350, speed: document.getElementById("blueSpeed").value, directionX: -1, directionY: -1
+}, {
+    id: "greenDot", posX: 0, posY: 350, speed: document.getElementById("greenSpeed").value, directionX: 1, directionY: -1
+}, {
+    id: "orangeDot", posX: 350, posY: 0, speed: document.getElementById("greenSpeed").value, directionX: -1, directionY: 1
+}]
+
+// some way to call function at interval specified by unique button
+// some way to check if the button is looped 
+// some way to properly update the position (check if we need ++ or ---?) + properly update the proper direction (.left, .top, etc.)
+
+
+
+function stepRed() {
+    moveRed();
+}
+
+function stepBlue() {
+    moveBlue();
+}
+
+function stepGreen() {
+    moveGreen();
+}
+
+function stepOrange() {
+    moveOrange();
+}
+
+// let noShapes = [1,2,3,4];
+// let shapeName = [document.getElementById("redDot"), document.getElementById("blueDot"), document.getElementById("greenDot"), document.getElementById("orangeDot")];
+// let shapePos = [0, 350, 350, 0];
+// let shapeSpeed = [document.getElementById("redSpeed").value, document.getElementById("blueSpeed").value, document.getElementById("greenSpeed").value, document.getElementById("orangeSpeed").value]
+// let stepShapeId = [setInterval(stepRed, shapeSpeed[0]), setInterval(stepBlue, shapeSpeed[1])];
+// let shapeEnd = [350, 0, 0, 350]
