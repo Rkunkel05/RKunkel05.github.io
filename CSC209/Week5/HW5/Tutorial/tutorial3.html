@@ -1,0 +1,20 @@
+<html>
+<body>
+
+    <h2> Class Constructors </h2>
+
+    <p id="demo"></p>
+
+    <script>
+    class Car {
+    constructor(brand) {
+        this.carName = brand;
+    }
+    }
+
+    myCar = new Car("Ford");
+    document.getElementById("demo").innerHTML = "My car is a " + myCar.carName;
+    </script>
+
+</body>
+</html>

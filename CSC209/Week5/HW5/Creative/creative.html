@@ -1,0 +1,18 @@
+<html>
+<body onload="drawCircle()">
+
+    Number of Fish: <input type="number" id="NRPTS" value="3"> <br><br>
+
+    <button onclick="drawCircle()">Generate Random Location</button> <br><br>
+
+    <button onclick="animateCircles();">Move Fish </button> <br><br>
+
+    <button onclick="resetCircles();">Reset Fish </button> <br><br>
+
+    Show Trace? <input type="checkbox" id ="showTrace" onclick ="animateCircles();"> <br><br>
+
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid black"></canvas>
+
+    <script src ="../js/creative.js"></script> 
+</body>
+</html>

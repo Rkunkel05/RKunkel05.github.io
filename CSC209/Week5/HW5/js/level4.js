@@ -6,29 +6,29 @@ const NRSTEPS = 100;
 
 // create a class for the cirlces
 class Circle {
-    constructor(x, y, vc, vy, color) {
+    constructor(x, y, vx, vy, color) {
         this.x = x;
         this.y = y;
         this.vx = vx;
         this.vy = vy;
         this.color = color;
     }
-}
 
-function draw() {
-    ctx.strokeStyle = this.color;
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, 25, 0, 2*Math.PI);
-    ctx.stroke();
-}
-
-function update() {
-    this.x += this.vx;
-    this.y += this.vy
-
-    // bounce
-    if (this.x <= 25 || this.x >= 375) this.vx *= -1;
-    if (this.y <= 25 || this.y >= 375) this.vy *= -1;
+     draw() {
+        ctx.strokeStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 25, 0, 2*Math.PI);
+        ctx.stroke();
+    }
+    
+    update() {
+        this.x += this.vx;
+        this.y += this.vy
+    
+        // bounce
+        if (this.x <= 25 || this.x >= 375) this.vx *= -1;
+        if (this.y <= 25 || this.y >= 375) this.vy *= -1;
+    }
 }
 
 function drawCircle() {
@@ -36,6 +36,8 @@ function drawCircle() {
     ctx.clearRect(0,0, 400, 400);
     // reset array 
     circles = [];
+
+    let NRPTS = document.getElementById("NRPTS").value;
 
     for (i=0; i < NRPTS; i++) {
         // define x & y so they're inside bounds
