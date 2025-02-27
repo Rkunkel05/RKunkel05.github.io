@@ -1,26 +1,63 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 ctx.lineWidth = 2;
-var x;
-var y;
+var id = null;
+// make an array of the created circles w/ coordinates + velociites stored
+let circles = [];
 
-// draw circles
+// draw circles... do these need to be objects maybe???
+// store data for x and y
 function drawCircle() {
     ctx.clearRect(0,0,400,400);
-    var NRPTS = document.getElementById("NRPTS").value;
+    let NRPTS = document.getElementById("NRPTS").value;
+
+    circles = [];
     
     for (i=0; i < NRPTS; i++) {
-        ctx.strokeStyle = randomColor();
-        ctx.beginPath();
-        randomLocation();
-        ctx.arc(x, y, 25, 0, 2 * Math.PI);
-        ctx.stroke();
-    
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+Math.random()*50, y+Math.random()*50);
-        ctx.stroke(); 
+        let x = randomX();
+        let y = randomY();
+        let vX = randomVelocity();
+        let vY = randomVelocity();
+
+        // create new object
+        circles.push({
+            x: x,
+            y: y,
+            vx: vX,
+            vy: vY, 
+
+            // update position depending on vx and vy
+            // function inside object! \/
+            update: function() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                //reverse velocity if collision
+                if (this.x >= 400 || this.x <= 0) this.vx = -this.vx;
+                if (this.y >= 400 || this.y <= 0) this.vy = -this.vy;
+            },
+
+            draw: function() {
+                //circle 
+                ctx.strokeStyle = randomColor();
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 25, 0, 2 * Math.PI);
+                ctx.stroke();
+
+                //velocity
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y); // start at circle
+                ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10); // line length depends on velocity
+                ctx.stroke();
+            }
+
+        });
     }
+
+    circles.forEach(circle => {
+        circle.update();
+        circle.draw();
+    });
 }
 
 // Generate random color
@@ -34,23 +71,29 @@ function randomColor() {
     return hexColor;
 }
 
-// Generate random location
-function randomLocation() {
-    randomX();
-    randomY();
-}
 function randomX() {
-    x = Math.random() * 400;
-
-    return x;
+    return Math.random() * 400;
 }
 function randomY() {
-    y = Math.random() * 400;
-
-    return y;
+    return Math.random() * 400;
+}
+// between 1 - 3
+function randomVelocity() {
+    return Math.random() * 2 + 1;
 }
 
 // Animate circles
-function moveCircle() {
-    
+// Adapt this from object to canvas element 
+function animateCircles() {
+    ctx.clearRect(0, 0, 400, 400);
+
+    id = setInterval(function() {
+        ctx.clearRect(0,0,400,400);
+        circles.forEach(circle => {
+            circle.update();
+            circle.draw();
+
+        }, 10) // 10ms
+    })
+
 }

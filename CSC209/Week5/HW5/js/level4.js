@@ -1,26 +1,57 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 ctx.lineWidth = 2;
-var x;
-var y;
+let circles = [];
+const NRSTEPS = 100;
 
-// draw circles
-function drawCircle() {
-    ctx.clearRect(0,0,400,400);
-    var NRPTS = document.getElementById("NRPTS").value;
-    
-    for (i=0; i < NRPTS; i++) {
-        ctx.strokeStyle = randomColor();
-        ctx.beginPath();
-        randomLocation();
-        ctx.arc(x, y, 25, 0, 2 * Math.PI);
-        ctx.stroke();
-    
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(x+Math.random()*50, y+Math.random()*50);
-        ctx.stroke(); 
+// create a class for the cirlces
+class Circle {
+    constructor(x, y, vc, vy, color) {
+        this.x = x;
+        this.y = y;
+        this.vx = vx;
+        this.vy = vy;
+        this.color = color;
     }
+}
+
+function draw() {
+    ctx.strokeStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, 25, 0, 2*Math.PI);
+    ctx.stroke();
+}
+
+function update() {
+    this.x += this.vx;
+    this.y += this.vy
+
+    // bounce
+    if (this.x <= 25 || this.x >= 375) this.vx *= -1;
+    if (this.y <= 25 || this.y >= 375) this.vy *= -1;
+}
+
+function drawCircle() {
+    // clear canvas
+    ctx.clearRect(0,0, 400, 400);
+    // reset array 
+    circles = [];
+
+    for (i=0; i < NRPTS; i++) {
+        // define x & y so they're inside bounds
+        let x = Math.random() * 350 + 25;
+        let y = Math.random() * 350 + 25;
+        // velocity between -2 and 2
+        let vx = (Math.random()  - 0.5) * 4;
+        let vy = (Math.random()  - 0.5) * 4;
+
+        let color = randomColor();
+
+        // add new circle to array
+        circles.push(new Circle(x, y, vx, vy, color));
+    }
+
+    animateCircles();
 }
 
 // Generate random color
@@ -34,18 +65,25 @@ function randomColor() {
     return hexColor;
 }
 
-// Generate random location
-function randomLocation() {
-    randomX();
-    randomY();
-}
-function randomX() {
-    x = Math.random() * 400;
+function animateCircles() {
+    let step = 0;
 
-    return x;
-}
-function randomY() {
-    y = Math.random() * 400;
+    let intervalId = setInterval(() => {
+        // stop after NRSTEPS 
+        if (step >= NRSTEPS) {
+            clearInterval(intervalId);
+            return;
+        }
+    
+        // clear canvas
+    ctx.clearRect(0, 0, 400,400);
 
-    return y;
+    // update & redraw each circle in array 
+    circles.forEach(circle => {
+        circle.update();
+        circle.draw();
+    })
+
+    step++;
+    })
 }
