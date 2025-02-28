@@ -1,17 +1,17 @@
 <!-- levels 6-7 sort of already condensed into the previous levels -->
 
 <html>
-<body onload="drawCircle()">
+<body onload="initializeAnimation()">
 
     Number of Points: <input type="number" id="NRPTS" value="3"> <br><br>
 
-    <button onclick="drawCircle()">Generate Random Location</button> <br><br>
+    <button onclick="animation.drawCircle()">Generate Random Location</button> <br><br>
 
-    <button onclick="animateCircles();">Play Animation </button> <br><br>
+    <button onclick="animation.animateCircles();">Play Animation </button> <br><br>
 
-    <button onclick="resetCircles();">Reset Animation </button> <br><br>
+    <button onclick="animation.resetCircles();">Reset Animation </button> <br><br>
 
-    Show Trace? <input type="checkbox" id ="showTrace" onclick ="animateCircles();"> <br><br>
+    Show Trace? <input type="checkbox" id ="showTrace" onclick ="animation.animateCircles();"> <br><br>
 
     <canvas id="myCanvas" width="400" height="400" style="border:1px solid black"></canvas>
 

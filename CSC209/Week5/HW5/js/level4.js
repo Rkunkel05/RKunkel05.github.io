@@ -4,56 +4,57 @@ ctx.lineWidth = 2;
 let circles = [];
 const NRSTEPS = 100;
 
-// create a class for the cirlces
-class Circle {
-    constructor(x, y, vx, vy, color) {
-        this.x = x;
-        this.y = y;
-        this.vx = vx;
-        this.vy = vy;
-        this.color = color;
-    }
-
-     draw() {
-        ctx.strokeStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, 25, 0, 2*Math.PI);
-        ctx.stroke();
-    }
-    
-    update() {
-        this.x += this.vx;
-        this.y += this.vy
-    
-        // bounce
-        if (this.x <= 25 || this.x >= 375) this.vx *= -1;
-        if (this.y <= 25 || this.y >= 375) this.vy *= -1;
-    }
-}
-
 function drawCircle() {
-    // clear canvas
-    ctx.clearRect(0,0, 400, 400);
-    // reset array 
-    circles = [];
-
+    ctx.clearRect(0,0,400,400);
     let NRPTS = document.getElementById("NRPTS").value;
 
+    circles = [];
+    
     for (i=0; i < NRPTS; i++) {
-        // define x & y so they're inside bounds
-        let x = Math.random() * 350 + 25;
-        let y = Math.random() * 350 + 25;
-        // velocity between -2 and 2
-        let vx = (Math.random()  - 0.5) * 4;
-        let vy = (Math.random()  - 0.5) * 4;
+        let x = randomX();
+        let y = randomY();
+        let vX = randomVelocity();
+        let vY = randomVelocity();
 
-        let color = randomColor();
+        // create new object
+        circles.push({
+            x: x,
+            y: y,
+            vx: vX,
+            vy: vY, 
 
-        // add new circle to array
-        circles.push(new Circle(x, y, vx, vy, color));
+            // update position depending on vx and vy
+            // function inside object! \/
+            update: function() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                //reverse velocity if collision
+                if (this.x >= 400 || this.x <= 0) this.vx = -this.vx;
+                if (this.y >= 400 || this.y <= 0) this.vy = -this.vy;
+            },
+
+            draw: function() {
+                //circle 
+                ctx.strokeStyle = randomColor();
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 25, 0, 2 * Math.PI);
+                ctx.stroke();
+
+                //velocity
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y); // start at circle
+                ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10); // line length depends on velocity
+                ctx.stroke();
+            }
+
+        });
     }
 
-    animateCircles();
+    circles.forEach(circle => {
+        circle.update();
+        circle.draw();
+    });
 }
 
 // Generate random color
@@ -65,6 +66,17 @@ function randomColor() {
     }
     
     return hexColor;
+}
+
+function randomX() {
+    return Math.random() * 400;
+}
+function randomY() {
+    return Math.random() * 400;
+}
+// between 1 - 3
+function randomVelocity() {
+    return Math.random() * 2 + 1;
 }
 
 function animateCircles() {
