@@ -1,0 +1,41 @@
+<html>
+<body onload="initializeAnimation()">
+
+    <h2> Extend the Animation exercise done in Week 4 to animate an arbitrary number of moving squares. </h2>
+
+    <label for="redSpeed">Red square speed</label>
+        <select id="redSpeed">
+            <option value=1>Slow</option>
+            <option value=3>Medium</option>
+            <option value=5>Fast</option>
+        </select> <br><br>
+        
+        <label for="blueSpeed">Blue square speed</label>
+        <select id="blueSpeed">
+            <option value=1>Slow</option>
+            <option value=3>Medium</option>
+            <option value=5>Fast</option>
+        </select> <br><br>
+
+        <label for="greenSpeed">Green square speed</label>
+        <select id="greenSpeed">
+            <option value=1>Slow</option>
+            <option value=3>Medium</option>
+            <option value=5>Fast</option>
+        </select> <br><br>
+
+        <label for="orangepeed">Orange square speed</label>
+        <select id="orangeSpeed">
+            <option value=1>Slow</option>
+            <option value=3>Medium</option>
+            <option value=5>Fast</option>
+        </select> <br><br>
+
+    <button onclick="animation.animateSquares();">Play Animation </button> <br><br>
+
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid black"></canvas> <br><br>
+
+    <script src="../JS/technicalNew.js"></script>
+
+</body>
+</html>

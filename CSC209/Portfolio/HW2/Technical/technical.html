@@ -1,0 +1,234 @@
+<html>
+<head>
+    <title>Technical</title>
+    <link id="theme" rel="stylesheet" type = "text/css" href = "styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <span class="dotSmall"></span> <!-- Calls upon the dotSmall in CSS-->
+    <!-- Inline Block: Defines shape so it is placed on same line as adjacent content but still functions as a block-->
+    <span class="dotBig"></span> <!-- Calls upon the dotBig in CSS -->
+    <span class="dotSmall"></span>
+    <h1> My Schedule </h1>
+    <span class="dotSmall"></span>
+    <span class="dotBig"></span>
+    <span class="dotSmall"></span>
+
+    <br />
+
+    <h2> Design a web page with at least two distinct "looks", a menu, a table with contents, several html files, at least one image, and text that appears when you click the Read Me button </h2>
+
+    <!-- For some odd reason CSS would not work in external file??? Only would apply in internal CSS... Weird! ): -->
+    <style>
+        nav {
+            background-color: rgb(79, 115, 182);
+            border: 2px solid black;
+            border-radius: 25px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 20px auto;
+            text-align:center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding:0;
+            margin:0;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li button {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            border-radius: 25px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        nav ul li button:hover {
+            background-color:#666;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            width: 50%;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body.alt-theme nav {
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 20px auto;
+            text-align:center;
+        }
+        body.alt-theme nav ul {
+            list-style-type: none;
+            padding:0;
+            margin:0;
+            overflow: hidden;
+        }
+        body.alt-theme nav ul li {
+            display: inline-block;
+        }
+        body.alt-theme nav ul li button {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            border-radius: 25px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        body.alt-theme nav ul li button:hover {
+            background-color:#666;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            width: 50%;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    
+<nav>
+    <ul>
+        <li><a href="../../portfolio.html"><button>Homepage</button></a></li>
+        <li><button onclick="changeStyle()">Toggle Style</button></li>
+        <li><button id ="toggleButton" onclick="hideShow()"; style = "display: inline-block;"> About Me </button></li>
+        <li><a href = "https://www.smith.edu/academics/psychology#psychology-major"><button>Major Requirements</button></a></li>
+        <li><a href = "https://www.smith.edu/academics/computer-science#computer-science-minor"><button>Minor Requirements</button></a></li>
+        <li><button onclick="references()" style = "display: inline-block;"> References </button></li>
+    </ul>
+</nav>
+
+<div id="myPopUp" class="dropdown-content" style="display:none">
+    <pre>Hi! I'm Rachel.
+I'm a Psychology major and Digital Art minor in my
+Sophomore year at Smith College.</pre>
+</div>
+
+<div id="references" class="dropdown-content" style="display:none">
+    <pre>
+<a href="https://www.w3schools.com/css/css3_borders.asp">Rounded Borders</a>
+<a href="https://stackoverflow.com/questions/33679719/how-to-add-text-next-to-a-shape">Inline-Block</a>
+<a href="https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp">Hide/Show Button</a>
+<a href="https://www.w3schools.com/Css/tryit.asp?filename=trycss_buttons_hover">Hover Effect</a>
+<a href="https://www.w3schools.com/Css/css3_shadows_box.asp">Shadows</a>
+<a href="https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp">Toggle Styles</a>
+<a href="https://www.w3schools.com/tags/tag_iframe.ASP">iFrame</a>
+<a href="https://www.w3schools.com/howto/howto_js_toggle_class.asp">Toggle Class</a>
+<a href="https://www.w3schools.com/howto/howto_js_remove_class.asp">Remove Class</a>
+    </pre>
+</div>
+
+<script>
+    function changeStyle() {
+            let theme = document.getElementById("theme");
+            if (theme.getAttribute("href") == "styles.css") {
+                theme.setAttribute("href","style2.css");
+                document.body.classList.toggle("alt-theme");
+            } else {
+                theme.setAttribute("href","styles.css");
+                document.body.classList.remove("alt-theme");
+            }
+        }
+
+        function hideShow() {
+            var x = document.getElementById("myPopUp");
+            var button = document.getElementById("toggleButton");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                button.innerText = "Hide Me";
+            } else {
+                x.style.display = "none";
+                button.innerText = "About Me";
+            }
+        }
+
+        function majorRequirements() {
+            var x = document.getElementById("majorRequirements");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function minorRequirements() {
+            var x = document.getElementById("minorRequirements");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function references() {
+            var x = document.getElementById("references");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+</script>
+    
+    <br />
+
+    <table style="width:100%">
+        <tr>
+            <th style="width:30%;">Class</th>
+            <th style="width: 20%;">Day</th>
+            <th style="width:20%;">Time</th>
+            <th style="width:20%;">Syllabus</th>
+          </tr>
+          <tr style="height:50px">
+            <td>EDC 239</td>
+            <td>Mon/Wed</td>
+            <td>9:25-10:40</td>
+            <td><a href="edcSyllabus.html">Syllabus</a>
+            </td>
+          </tr>
+          <tr style="height:50px">
+            <td>CSC 209</td>
+            <td>Wed</td>
+            <td>1:20-4:00</td>
+            <td><a href="cscSyllabus.html">Syllabus</a>
+          </tr>
+          <tr style="height:50px">
+              <td>PSY 202</td>
+              <td>Tues/Thurs</td>
+              <td>1:20-2:35</td>
+              <td><a href="psySyllabus.html">Syllabus</a>
+            </tr>
+          <tr style="height:50px">
+              <td>ARS 162</td>
+              <td>Tues/Thurs</td>
+              <td>9:25-12:05</td>
+              <td><a href="arsSyllabus.html">Syllabus</a>
+            </tr>
+    </table>
+
+    <br />
+
+    <h5> Time Taken: 3hrs </h5> 
+    <img src="Images/sillyCatMeow.png" alt="Silly Cat" width = "100" height = "100" style="vertical-align: middle">
+
+</body>
+</html>

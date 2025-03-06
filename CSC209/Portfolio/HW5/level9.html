@@ -1,0 +1,22 @@
+<!-- levels 6-7 sort of already condensed into the previous levels -->
+
+<html>
+<body onload="initializeAnimation()">
+
+   <h2> Using Javascript graphics (canvas), draw a scene with one point (drawn as a little disk) together with a vector (shown as a short line segment or arrow) out of it representing a direction and speed with which we'd like the point to move, generate random locations, allow for adding points, a reset butotn, and an option for trace </h2>
+
+    Number of Points: <input type="number" id="NRPTS" value="3"> <br><br>
+
+    <button onclick="animation.drawCircle()">Generate Random Location</button> <br><br>
+
+    <button onclick="animation.animateCircles();">Play Animation </button> <br><br>
+
+    <button onclick="animation.resetCircles();">Reset Animation </button> <br><br>
+
+    Show Trace? <input type="checkbox" id ="showTrace" onclick ="animation.animateCircles();"> <br><br>
+
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid black"></canvas> <br><br>
+
+    <script src ="../js/level9.js"></script> 
+</body>
+</html>
