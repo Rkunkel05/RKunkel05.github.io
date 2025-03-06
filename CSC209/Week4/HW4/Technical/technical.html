@@ -5,7 +5,7 @@
         <link id="theme" rel="stylesheet" type = "text/css" href = "../CSS/animation.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body onload="initializeAnimation()">
         <label for="redSpeed">Red square speed</label>
         <select id="redSpeed">
             <option value=30>Slow</option>
@@ -22,11 +22,7 @@
         </select>
         <button onclick="moveBlue()" id="moveBlueBtn">Move blue square</button> <br><br>  
     
-        <div id ="myContainer">
-            <div id ="blueSq" class="blue"></div>
-            <div id ="redSq" class="red"></div>
-        </div>
-
+        <canvas id="myCanvas" width="400" height="400" style="border:1px solid black"></canvas><br><br>
     
         <script src="../JS/animation.js"></script>
 
