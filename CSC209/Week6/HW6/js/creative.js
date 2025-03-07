@@ -4,7 +4,9 @@ function drawGrid() {
     ctx.lineWidth = 2;
 
     let squares = [];
+    let intervalId = null;
 
+    // draws each square
     this.drawSquare = function() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let squareSize = 50;
@@ -28,6 +30,7 @@ function drawGrid() {
         }
     };
 
+    // generates black or white randomly
     function randomColor() {
         num = Math.random(); // between 0 and 1
         if (num >= 0.5) {
@@ -94,6 +97,7 @@ function drawGrid() {
         updateSquares();
     };
 
+    // updates the squares based on the new info
     function updateSquares() {
         ctx.clearRect(0,0,canvas.width,canvas.height);
         for (let square of squares) {
@@ -103,9 +107,22 @@ function drawGrid() {
             ctx.strokeRect(square.x,square.y,square.size,square.size);
         }
     }
+
+    // plays all generations
+    this.playAll = function() {
+        intervalId = setInterval(() => {
+            game.checkNext();
+        }, 500); // every 500ms
+    } 
+
+    this.stopGame = function() {
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+    }
 }
-
-
+            
 let game;
 
 function initGame() {
