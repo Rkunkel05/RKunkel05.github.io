@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Technical</title>
+    <link id="theme" rel="stylesheet" type = "text/css" href = "../css/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h1>My Cats!! </h1>
+    
+    <div id="slideshow-container"></div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+    <?php 
+    include('../php/level4.php');
+    ?>
+
+    <br />
+
+
+</body>
+</html>
