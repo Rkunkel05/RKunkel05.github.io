@@ -1,14 +1,36 @@
-.container {
+body {
+    background-color:#fbe4d3;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+  .image-text-container {
     position: relative;
-    text-align: center;
-    color: white;
+    width: 300px;
   }
 
-  .centered {
+  .img-text-container img {
+    width: 100%;
+    display: block;
+  }
+
+  .overlay-text {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 47%;
     transform: translate(-50%, -50%);
+    font-family: 'Barrio';
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
   }
 
 @font-face { 
@@ -16,28 +38,94 @@
     src: url('../fonts/Barrio-Regular.ttf');
 }
 
-body {
-    background-color:#FDF3EC;
-    text-align:center;
-}
-
-.h1 {
-    font-family:Barrio;
+@font-face { 
+    font-family:Barriciecito;
+    src: url('../fonts/Barriecito-Regular.ttf');
 }
 
 button {
-    font-size: 20;
+    font-size: 20px;
     color: white;
     background-color: #76B3D0;
-    border: 2px solid#FDF3EC;
+    border: 2px solid#76B3D0;
     border-radius: 25px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Barriciecito';
+    letter-spacing: 0.2rem;
     padding: 10px;
-    margin: 20px auto;
-    display:inline-block;;
+    cursor: pointer;
 }
 
 button:hover {
     background-color:rgb(185, 185, 185);
+    border: 2px solid rgb(185, 185, 185);
     transition-duration:500ms
+}
+
+.iPod-box {
+    margin: 0 auto;
+    width: 300px; 
+    height: 500px; 
+    background-color: #76B3D0;
+    border-radius: 15px;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 60px;
+    justify-content: space-between;
+}
+
+.display-screen {
+    margin-top: 1px;
+    width: 200px; 
+    height: 200px; 
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px; 
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.display-screen pre {
+    margin-top: 10px;
+    font-family: 'Barriciecito';
+    font-size: 20px;
+    color: #76B3D0;
+}
+
+.play-button {
+    height:40px; 
+    width: 40px;
+    background-color: white;
+    border:2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #76B3D0;
+    margin-bottom: 150px;
+}
+
+/* HTML: <div class="wavy-line"></div> */
+.wavy-line {
+    --s: 40px; /* size of the wave */
+    --b: 10px; /* thickness of the line */
+    --m: .3; /* curvature of the wave [0 2] */
+    
+    background: #76B3D0;
+    --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+    height: calc(2*var(--R));
+    width: 100%;
+    --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+    mask:
+      radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) 
+       calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+      radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)),var(--_g)) 
+       50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+  }
+
+  centered {
+    text-align: center;
 }
