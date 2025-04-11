@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+@font-face { 
+    font-family:Barrio;
+    src: url('../fonts/Barrio-Regular.ttf');
+}
+
+body {
+    background-color:#FDF3EC;
+    text-align:center;
+}
+
+.h1 {
+    font-family:Barrio;
+}
+
+button {
+    font-size: 20;
+    color: white;
+    background-color: #76B3D0;
+    border: 2px solid#FDF3EC;
+    border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 20px auto;
+    display:inline-block;;
+}
+
+button:hover {
+    background-color:rgb(185, 185, 185);
+    transition-duration:500ms
+}
